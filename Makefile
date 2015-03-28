@@ -4,7 +4,7 @@ rpm:
 	sudo bundler exec fpm-cook
 
 install:
-	sudo yum install -y pkg/docker-registry-*.rpm
+	sudo yum install -y pkg/docker-registry-omnibus-*.rpm
 
 clean:
 	sudo bundler exec fpm-cook clean
