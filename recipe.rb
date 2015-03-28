@@ -2,17 +2,16 @@
 
 class DockerRegistry < FPM::Cookery::Recipe
 
-  description 'Docker Registry'
+  description 'Docker Registry Omnibus Package'
   homepage 'https://github.com/docker/docker-registry'
 
-  name     'docker-registry'
+  name     'docker-registry-omnibus'
   version  '0.9.1'
   revision  0
 
   source '', :with => :noop
 
   maintainer '<zaa@ikato.com>'
-  vendor     'fpm'
   license    'Apache License Version 2.0'
 
   section 'Services'
