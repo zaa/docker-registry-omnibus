@@ -1,0 +1,6 @@
+name="docker-registry"
+
+getent group ${name} >/dev/null || groupadd -r ${name}
+getent passwd ${name} >/dev/null || \
+  useradd --system --home-dir "/var/lib/${name}" --no-create-home \
+          --gid "${name}" --shell /bin/false "${name}"

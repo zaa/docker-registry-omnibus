@@ -1,0 +1,7 @@
+name="docker-registry"
+
+install -d -o "${name}" -g "${name}" -m 0755 "/var/lib/${name}"
+install -d -o "${name}" -g "${name}" -m 0755 "/var/log/${name}"
+install -d -o "${name}" -g "${name}" -m 0755 "/var/run/${name}"
+
+/sbin/chkconfig --add ${name}

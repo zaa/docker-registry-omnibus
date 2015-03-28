@@ -1,0 +1,9 @@
+export RUNAS="docker-registry"
+
+export ACCESS_LOGFILE="/var/log/docker-registry/access.log"
+export ERROR_LOGFILE="/var/log/docker-registry/errors.log"
+export LOGFILE="/var/log/docker-registry/docker-registry.log"
+
+export DOCKER_REGISTRY_CONFIG="/etc/docker-registry/config.yml"
+export STORAGE_PATH="/var/lib/docker-registry/registry"
+export SETTINGS_FLAVOR="local"

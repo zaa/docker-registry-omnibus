@@ -1,3 +1,5 @@
+# vim: set ts=2 sts=2 sw=2 et:
+
 class Python < FPM::Cookery::Recipe
 
   description 'Python Programming Language'
@@ -17,17 +19,21 @@ class Python < FPM::Cookery::Recipe
   section 'Interpreters'
 
   platforms [:fedora, :redhat, :centos] do
-    build_depends 'autoconf',
-                  'bison',
+    build_depends 'bzip2-devel',
                   'gdbm-devel',
+                  'sqlite-devel',
                   'libxml2-devel',
+                  'ncurses-devel',
                   'readline-devel',
                   'openssl-devel'
                   
-    depends 'zlib',
-            'libxml2',
-            'gdbm',
-            'readline'
+    depends       'zlib',
+                  'bzip2',
+                  'libxml2',
+                  'gdbm',
+                  'sqlite',
+                  'ncurses',
+                  'readline'
   end
   platforms [:fedora] do
     depends.push('openssl-libs')
@@ -42,7 +48,10 @@ class Python < FPM::Cookery::Recipe
   end
 
   def install
+    # install Python
     make :install
+
+    # install pip
     cleanenv_safesystem "#{destdir}/bin/python -m ensurepip"
   end
 end
