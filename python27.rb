@@ -1,11 +1,11 @@
 # vim: set ts=2 sts=2 sw=2 et:
 
-class Python < FPM::Cookery::Recipe
+class Python27 < FPM::Cookery::Recipe
 
-  description 'Python Programming Language'
+  description 'Python Programming Language. Version 2.7'
   homepage 'http://www.python.org/'
 
-  name 'python'
+  name 'python27'
   version '2.7.9'
   revision 0
 
@@ -13,7 +13,6 @@ class Python < FPM::Cookery::Recipe
   sha256 'c8bba33e66ac3201dabdc556f0ea7cfe6ac11946ec32d357c4c6f9b018c12c5b'
 
   maintainer '<zaa@ikato.com>'
-  vendor     'fpm'
   license    'https://docs.python.org/2/license.html'
 
   section 'Interpreters'
@@ -26,7 +25,7 @@ class Python < FPM::Cookery::Recipe
                   'ncurses-devel',
                   'readline-devel',
                   'openssl-devel'
-                  
+
     depends       'zlib',
                   'bzip2',
                   'libxml2',

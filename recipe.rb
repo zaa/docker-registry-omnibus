@@ -18,7 +18,7 @@ class DockerRegistry < FPM::Cookery::Recipe
 
   omnibus_package true
   omnibus_dir     "/opt/#{name}"
-  omnibus_recipes 'python'
+  omnibus_recipes 'python27'
 
   platforms [:fedora, :redhat, :centos] do
     pre_install    'files/pre-install'
