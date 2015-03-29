@@ -19,8 +19,9 @@ on the host system.
 
 The steps above would produce an RPM in the `/vagrant/pkg/` directory
 which you can copy to a RHEL/CentOS box and install using `rpm`.  The
-package will include Python 2.7.x along with dockery-registry `pip`
-package and all the related packages and files.
+package will include an embdedded version of Python 2.7.x along with
+dockery-registry `pip` package and all the related packages and files in
+`/opt/docker-registry` folder.
 
 # How to start Docker Registry
 
