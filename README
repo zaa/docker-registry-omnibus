@@ -1,5 +1,0 @@
-This is an Omnibus project that will build a "monolithic" OS package for Docker
-Registry.  It installs an embedded version of python along with all python
-packages required by the docker-registry project. This makes is possible to run
-the Docker Registry without taking into account what version of the Python
-Language or of the required packages is installed on the host system.
